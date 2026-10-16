@@ -25,8 +25,7 @@ L'objectif métier consiste à anticiper les tensions de flux pour optimiser la 
 2. **Encodage cyclique des composantes temporelles** :
    * L'heure de la journée (0 à 23h) et le mois de l'année (1 à 12) sont des grandeurs périodiques (23h est contigu à 00h).
    * Transformation trigonométrique appliquée :
-     $$\text{sin\_hour} = \sin\left(\frac{2\pi \cdot \text{hour}}{24}\right), \quad \text{cos\_hour} = \cos\left(\frac{2\pi \cdot \text{hour}}{24}\right)$$
-     $$\text{sin\_month} = \sin\left(\frac{2\pi \cdot \text{month}}{12}\right), \quad \text{cos\_month} = \cos\left(\frac{2\pi \cdot \text{month}}{12}\right)$$
+$$\sin_{\text{hour}} = \sin\left(\frac{2\pi \cdot \text{hour}}{24}\right), \quad \cos_{\text{hour}} = \cos\left(\frac{2\pi \cdot \text{hour}}{24}\right)$$     $$\sin_{\text{month}} = \sin\left(\frac{2\pi \cdot \text{month}}{12}\right), \quad \cos_{\text{month}} = \cos\left(\frac{2\pi \cdot \text{month}}{12}\right)$$
 3. **Stratégie de découpage chronologique** :
    * Conformément aux contraintes des séries temporelles, les données ont été scindées chronologiquement (80 % train, 20 % test) sans mélange aléatoire, prévenant toute fuite d'information future (*look-ahead bias*).
 4. **Pipeline de pré-traitement** :
